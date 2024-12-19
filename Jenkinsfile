@@ -1,7 +1,6 @@
 pipeline {
     agent any
-
-    stages {
+stages {
         stage('Deploy to Kubernetes') {
             steps {
                withKubeCredentials(kubectlCredentials: [[caCertificate: '', clusterName: ' EKS-1', contextName: '', credentialsId: '', namespace: 'webapps', serverUrl: 'https://BE1D4471F6264B2246C8708BAD1528E4.gr7.ap-south-1.eks.amazonaws.com']]) {
